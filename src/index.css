@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "raleway-regular";
+  src: url(../fonts/raleway-regular.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "raleway-semibold";
+  src: url(../fonts/raleway-semibold.woff2) format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "raleway-bold";
+  src: url(../fonts/raleway-bold.woff2) format("woff2");
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --accent: 228, 10, 19;
+    --light: 255, 255, 255;
+    --dark: 54, 54, 54;
+    --orange: 244, 173, 76;
+  }
+
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply text-dark font-regular  min-h-screen w-full;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  ul {
+    @apply list-none;
+  }
+
+  button {
+    @apply cursor-pointer bg-transparent outline-none;
+  }
+
+  p {
+    @apply mb-1.5 text-sm text-balance leading-normal;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold  leading-normal font-['Varela_Round'] text-dark;
+  }
+
+  h1 {
+    @apply text-[clamp(35px,4vw,50px)] leading-none mb-2;
+  }
+
+  h2 {
+    @apply text-[clamp(28px,4vw,42px)] leading-none mb-2;
+  }
+
+  h3 {
+    @apply text-[clamp(20px,4vw,38px)] leading-none mb-2;
+  }
+
+  h4 {
+    @apply text-[clamp(18px,4vw,24px)] leading-none mb-2;
+  }
+
+  h5 {
+    @apply text-[clamp(14px,4vw,18px)] leading-none mb-2;
+  }
+
+  img {
+    @apply block;
+  }
+
+  .btn {
+    @apply text-sm text-white  flex items-center gap-2 py-2 px-4 rounded-full bg-black;
+  }
+
+  .btn-accent {
+    @apply bg-accent hover:bg-opacity-90;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1400px] mx-auto px-4 w-full;
+  }
+}
