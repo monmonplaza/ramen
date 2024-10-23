@@ -3,7 +3,7 @@ import { ShoppingBag } from "lucide-react";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ setIsShowCart }) => {
   return (
     <div>
       <header className="py-3">
@@ -37,7 +37,7 @@ const Header = () => {
             </li>
           </ul>
 
-          <button>
+          <button onClick={() => setIsShowCart(true)}>
             <ShoppingBag stroke={"#fff"} />
           </button>
         </div>

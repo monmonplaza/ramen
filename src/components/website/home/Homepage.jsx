@@ -1,3 +1,4 @@
+import React from "react";
 import Footer from "../partials/Footer.jsx";
 import Cart from "./Cart.jsx";
 import HomeBanner from "./HomeBanner.jsx";
@@ -7,15 +8,24 @@ import HomeMenu from "./HomeMenu.jsx";
 import HomeSlider from "./HomeSlider.jsx";
 
 const Homepage = () => {
+  const [cartItem, setCartItem] = React.useState([]);
+  const [isShowCart, setIsShowCart] = React.useState(false);
+
   return (
     <>
-      <HomeBanner />
+      <HomeBanner setIsShowCart={setIsShowCart} />
       <HomeInstruction />
-      <HomeMenu />
+      <HomeMenu cartItem={cartItem} setCartItem={setCartItem} />
       <HomeHappyHour />
       <HomeSlider />
       <Footer />
-      <Cart />
+      {isShowCart && (
+        <Cart
+          cartItem={cartItem}
+          setCartItem={setCartItem}
+          setIsShowCart={setIsShowCart}
+        />
+      )}
     </>
   );
 };

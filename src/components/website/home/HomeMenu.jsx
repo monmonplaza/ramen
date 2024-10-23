@@ -3,7 +3,25 @@ import { Plus } from "lucide-react";
 import React from "react";
 import { ramens } from "./data-ramen.jsx";
 
-const HomeMenu = () => {
+const HomeMenu = ({ cartItem, setCartItem }) => {
+  const handleAddItem = (item) => {
+    const exist = cartItem.find((cart) => cart.aid === item.aid);
+
+    if (exist !== undefined) {
+      setCartItem(
+        cartItem.map((cart) =>
+          cart.aid === item.aid
+            ? { ...exist, quantity: exist.quantity + 1 }
+            : cart
+        )
+      );
+    } else {
+      setCartItem([...cartItem, { ...item, quantity: 1 }]);
+    }
+
+    console.log("success add to cart");
+  };
+
   return (
     <section className="py-24 bg-orange bg-[url('./public/img/pattern.webp')] bg-repeat bg-center bg-blend-color-burn bg-opacity-100">
       <div className="container">
@@ -28,7 +46,10 @@ const HomeMenu = () => {
                       })}
                     </ul>
 
-                    <button className="btn btn-accent">
+                    <button
+                      className="btn btn-accent"
+                      onClick={() => handleAddItem(ramen)}
+                    >
                       <Plus size={18} /> Add to Cart
                     </button>
                   </div>

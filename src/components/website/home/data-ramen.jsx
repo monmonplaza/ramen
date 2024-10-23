@@ -1,7 +1,8 @@
 export const ramens = [
   {
+    aid: 1,
     name: "Michi",
-    price: "PHP150",
+    price: "150",
     ingridents: [
       "Roasted Nori",
       "Chashu Slices",
@@ -13,16 +14,18 @@ export const ramens = [
   },
 
   {
+    aid: 2,
     name: "Sapporo",
-    price: "PHP150",
+    price: "150",
     ingridents: ["Chashu Slices", "Bean Sprout", "Corn/Butter"],
     img: "menu-2.webp",
     category: "Shoyo Tonkotsu",
   },
 
   {
+    aid: 3,
     name: "Veggie",
-    price: "PHP100",
+    price: "100",
     ingridents: [
       "Chives",
       "Sprouts and Cabbage",
@@ -34,8 +37,9 @@ export const ramens = [
   },
 
   {
+    aid: 4,
     name: "Meat Lovers",
-    price: "PHP100",
+    price: "100",
     ingridents: [
       "Chashu Slices",
       "Mayu Oil",
@@ -47,8 +51,9 @@ export const ramens = [
   },
 
   {
+    aid: 5,
     name: "Dipping",
-    price: "PHP100",
+    price: "100",
     ingridents: [
       "Chashu Slices",
       "Shreaded Nori",
@@ -57,13 +62,14 @@ export const ramens = [
       "Ground Chashu",
       "Fresh Garlic",
     ],
-    img: "menu-1.webp",
+    img: "menu-5.webp",
     category: "Fish Tonkotsu",
   },
 
   {
+    aid: 6,
     name: "Texas",
-    price: "PHP100",
+    price: "100",
     ingridents: [
       "Smoked BBQ Pork Ribs",
       "Vinegar Slaw",
@@ -73,13 +79,14 @@ export const ramens = [
       "Fresh Garlic",
       "Spicy BBQ Sauce",
     ],
-    img: "menu-5.webp",
+    img: "menu-6.webp",
     category: "Tomato Tonkotsu",
   },
 
   {
+    aid: 7,
     name: "Jungle",
-    price: "PHP100",
+    price: "100",
     ingridents: [
       "Shellfish",
       "Vinegar Slaw",
@@ -89,13 +96,14 @@ export const ramens = [
       "Toasted Lemongrass",
       "Cilantro",
     ],
-    img: "menu-6.webp",
+    img: "menu-7.webp",
     category: "Lemongrass Tonkotsu",
   },
 
   {
+    aid: 8,
     name: "Special",
-    price: "PHP100",
+    price: "100",
     ingridents: [
       "Smoked BBQ Pork Ribs",
       "Vinegar Slaw",
@@ -105,7 +113,7 @@ export const ramens = [
       "Spicy BBQ Sauce",
       "Pickled Spear",
     ],
-    img: "menu-7.webp",
+    img: "menu-1.webp",
     category: "Tomato Tonkotsu",
   },
 ];
