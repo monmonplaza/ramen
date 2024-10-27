@@ -34,8 +34,11 @@ const Cart = ({ cartItem, setCartItem, setIsShowCart }) => {
     }
   };
 
+  const getSubTotal = cartItem.reduce((a, c) => a + c.quantity * c.price, 0);
+
   return (
     <div className="w-[300px] h-screen fixed top-0 right-0 bg-white z-50 grid grid-rows-[auto,_1fr,_auto] shadow-[rgba(17,_0,_26,_0.1)_0px_0px_16px]">
+      {/* <div className="w-full h-full absolute top-0 left-0 bg-black bg-opacity-70"></div> */}
       <div className="cart-header p-3 flex justify-between mb-2">
         <h4 className="mb-0">Your Cart</h4>
         <button onClick={() => setIsShowCart(false)}>
@@ -92,7 +95,8 @@ const Cart = ({ cartItem, setCartItem, setIsShowCart }) => {
         <ul className="flex justify-between items-center mb-1">
           <li className="text-xs ">Subtotal</li>
           <li>
-            <span>PHP</span>1000
+            <span>PHP</span>
+            {getSubTotal}
           </li>
         </ul>
         <ul className="flex justify-between items-center mb-1">
@@ -105,7 +109,8 @@ const Cart = ({ cartItem, setCartItem, setIsShowCart }) => {
         <ul className="flex justify-between items-center mb-1 mt-5 border-t border-gray-200 pt-2">
           <li className="text-base font-bold">Total </li>
           <li>
-            <span>PHP</span>1100.00
+            <span>PHP</span>
+            {getSubTotal + 10}
           </li>
         </ul>
       </div>
