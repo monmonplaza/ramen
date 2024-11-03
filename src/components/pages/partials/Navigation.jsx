@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { imgPath } from "@/components/helpers/functions-general";
 import {
   Clapperboard,
   LayoutDashboard,
@@ -7,13 +6,17 @@ import {
   Soup,
   Star,
 } from "lucide-react";
-import { imgPath } from "@/components/helpers/functions-general";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = ({ menu }) => {
   return (
     <div className="p-4 ">
-      <div className="mb-5">
+      <div className="mb-5 flex gap-2 items-center">
         <img src={`${imgPath}/logo.png`} alt="" className="w-[30%]" />
+        <h5 className="uppercase mb-0">
+          Naruto <br /> <span className="text-sm">Ramen</span>
+        </h5>
       </div>
 
       <nav>

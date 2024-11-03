@@ -1,7 +1,7 @@
+import useQueryData from "@/components/custom-hooks/useQueryData.jsx";
 import { imgPath } from "@/components/helpers/functions-general.jsx";
 import { Plus } from "lucide-react";
 import React from "react";
-import useQueryData from "@/components/custom-hooks/useQueryData.jsx";
 import { StoreContext } from "@/components/store/StoreContext.jsx";
 import ToastSuccess from "../partials/ToastSuccess.jsx";
 import { setSuccess } from "@/components/store/StoreAction.jsx";
