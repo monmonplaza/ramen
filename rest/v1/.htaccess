@@ -18,4 +18,13 @@ RewriteRule ^ramen/active/([0-9]+)$ controllers/developer/ramen/active.php?ramen
 RewriteRule ^ramen/page/([0-9]+)$ controllers/developer/ramen/page.php?start=$1 [L]
 RewriteRule ^ramen/search$ controllers/developer/ramen/search.php [L]
 RewriteRule ^ramen/read-all-category$ controllers/developer/ramen/read-all-category.php [L]
+
+
+### PRODUCT ###
+RewriteRule ^transaction$ controllers/developer/transaction/transaction.php [L]
+RewriteRule ^transaction/([0-9]+)$ controllers/developer/transaction/transaction.php?transactionid=$1 [L]
+RewriteRule ^transaction/active/([0-9]+)$ controllers/developer/transaction/active.php?transactionid=$1 [L]
+RewriteRule ^transaction/page/([0-9]+)$ controllers/developer/transaction/page.php?start=$1 [L]
+RewriteRule ^transaction/search$ controllers/developer/transaction/search.php [L]
+RewriteRule ^transaction/read-all-category$ controllers/developer/transaction/read-all-category.php [L]
   

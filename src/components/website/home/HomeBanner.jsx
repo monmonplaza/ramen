@@ -4,11 +4,11 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import Header from "../partials/Header.jsx";
 
-const HomeBanner = ({ setIsShowCart }) => {
+const HomeBanner = ({ setIsShowCart, cartItem }) => {
   return (
-    <section className="bg-[url('./public/img/banner.webp')] bg-cover bg-no-repeat bg-[left_top_-400px] min-h-screen relative ">
+    <section className="bg-[url('./public/img/banner.webp')] bg-cover bg-no-repeat bg-[left_top_-400px] min-h-[80vh] relative ">
       <div className="container">
-        <Header setIsShowCart={setIsShowCart} />
+        <Header setIsShowCart={setIsShowCart} cartItem={cartItem} />
         <div className="absolute top-[14vw] left-1/2 -translate-x-1/2 text-center uppercase">
           <h1 className="text-white mb-1 text-[clamp(50px,_6vw,_180px)]">
             Michi Ramen
