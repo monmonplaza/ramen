@@ -1,5 +1,5 @@
-export const projectURL = "http://localhost/ramen";
-export const imgPath = "http://localhost/ramen/public/img";
+export const projectURL = "http://localhost/viter-ramen";
+export const imgPath = "http://localhost/viter-ramen/public/img";
 
 export const devApiUrl = `${projectURL}/rest`;
 export const devBaseUrl = `${projectURL}`;

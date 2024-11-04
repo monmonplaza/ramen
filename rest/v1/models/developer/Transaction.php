@@ -82,6 +82,20 @@ class Transaction
         return $query;
     }
 
+    public function readAllByDate()
+    {
+        try {
+            $sql = "select *, sum(transaction_price) as total from {$this->tblTransaction} ";
+            $sql .= "group by date(transaction_created) ";
+            $sql .= "order by transaction_is_active desc, ";
+            $sql .= "transaction_created asc ";
+            $query = $this->connection->query($sql);
+        } catch (PDOException $ex) {
+            $query = false;
+        }
+        return $query;
+    }
+
     // read limit
     public function readLimit()
     {
