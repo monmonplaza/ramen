@@ -13,7 +13,7 @@ const Homepage = () => {
 
   return (
     <>
-      <HomeBanner setIsShowCart={setIsShowCart} />
+      <HomeBanner setIsShowCart={setIsShowCart} cartItem={cartItem} />
       <HomeInstruction />
       <HomeMenu cartItem={cartItem} setCartItem={setCartItem} />
       <HomeHappyHour />

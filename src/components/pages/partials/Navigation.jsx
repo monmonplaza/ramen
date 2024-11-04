@@ -1,5 +1,11 @@
 import { imgPath } from "@/components/helpers/functions-general";
-import { Clapperboard, LayoutDashboard, Soup, Star } from "lucide-react";
+import {
+  Clapperboard,
+  LayoutDashboard,
+  ReceiptText,
+  Soup,
+  Star,
+} from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -32,6 +38,16 @@ const Navigation = ({ menu }) => {
             >
               {" "}
               <Soup size={18} strokeWidth={1} /> Ramen{" "}
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              to="/admin/transaction"
+              className={`${menu === "transaction" ? "active" : ""} nav-link`}
+            >
+              {" "}
+              <ReceiptText size={18} strokeWidth={1} /> Transaction{" "}
             </Link>
           </li>
         </ul>
